@@ -1,0 +1,32 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": 4
+      }
+    }]
+  ],
+  "plugins": [
+    "add-module-exports"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["env", {
+          "exclude": ["transform-async-to-generator", "transform-regenerator"],
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ],
+      "plugins": [
+        ["fast-async", {
+          "compiler": {
+            "noRuntime": true
+          }
+        }],
+        "add-module-exports"
+      ]
+    }
+  }
+}

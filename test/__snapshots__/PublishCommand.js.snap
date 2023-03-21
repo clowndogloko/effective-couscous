@@ -1,0 +1,525 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[fixed --conventional-commits] git adds changed files 1`] = `
+Array [
+  "lerna.json",
+  "packages/package-1/CHANGELOG.md",
+  "packages/package-1/package.json",
+  "packages/package-2/CHANGELOG.md",
+  "packages/package-2/package.json",
+  "packages/package-3/CHANGELOG.md",
+  "packages/package-3/package.json",
+  "packages/package-4/CHANGELOG.md",
+  "packages/package-4/package.json",
+  "packages/package-5/CHANGELOG.md",
+  "packages/package-5/package.json",
+  "CHANGELOG.md",
+]
+`;
+
+exports[`[fixed --conventional-commits] git commit message 1`] = `"v5.1.1"`;
+
+exports[`[independent --canary --npm-tag=next --yes --exact] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "next",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "next",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "next",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "next",
+  },
+]
+`;
+
+exports[`[independent --canary] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.1.0-alpha.deadbeef",
+  "packages/package-2": "2.1.0-alpha.deadbeef",
+  "packages/package-3": "3.1.0-alpha.deadbeef",
+  "packages/package-4": "4.1.0-alpha.deadbeef",
+  "packages/package-5": "5.1.0-alpha.deadbeef",
+}
+`;
+
+exports[`[independent --canary] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "canary",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "canary",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "canary",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "canary",
+  },
+]
+`;
+
+exports[`[independent --cd-version=prerelease --preid=foo] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.0.1-foo.0",
+  "packages/package-2": "2.0.1-foo.0",
+  "packages/package-3": "3.0.1-foo.0",
+  "packages/package-4": "4.0.1-foo.0",
+  "packages/package-5": "5.0.1-foo.0",
+}
+`;
+
+exports[`[independent --cd-version=prerelease] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.0.1-0",
+  "packages/package-2": "2.0.1-0",
+  "packages/package-3": "3.0.1-0",
+  "packages/package-4": "4.0.1-0",
+  "packages/package-5": "5.0.1-0",
+}
+`;
+
+exports[`[independent --cd-version] git commit message 1`] = `
+"Publish
+
+ - package-1@1.0.1
+ - package-2@2.0.1
+ - package-3@3.0.1
+ - package-4@4.0.1
+ - package-5@5.0.1"
+`;
+
+exports[`[independent --conventional-commits] git adds changed files 1`] = `
+Array [
+  "packages/package-1/CHANGELOG.md",
+  "packages/package-1/package.json",
+  "packages/package-2/CHANGELOG.md",
+  "packages/package-2/package.json",
+  "packages/package-3/CHANGELOG.md",
+  "packages/package-3/package.json",
+  "packages/package-4/CHANGELOG.md",
+  "packages/package-4/package.json",
+  "packages/package-5/CHANGELOG.md",
+  "packages/package-5/package.json",
+]
+`;
+
+exports[`[independent --conventional-commits] git commit message 1`] = `
+"Publish
+
+ - package-1@1.0.1
+ - package-2@1.1.0
+ - package-3@2.0.0
+ - package-4@1.1.0
+ - package-5@5.1.1"
+`;
+
+exports[`[independent --message] git commit message 1`] = `
+"chore: Custom publish message
+
+ - package-1@1.0.1
+ - package-2@1.0.1
+ - package-3@1.0.1
+ - package-4@1.0.1
+ - package-5@1.0.1"
+`;
+
+exports[`[independent] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.0.1",
+  "packages/package-2": "1.1.0",
+  "packages/package-3": "2.0.0",
+  "packages/package-4": "1.1.0",
+  "packages/package-5": "1.0.1",
+}
+`;
+
+exports[`[independent] console output 1`] = `
+Array [
+  "",
+  "Changes:",
+  " - package-1: 1.0.0 => 1.0.1
+ - package-2: 2.0.0 => 1.1.0
+ - package-3: 3.0.0 => 2.0.0
+ - package-4: 4.0.0 => 1.1.0
+ - package-5: 5.0.0 => 1.0.1 (private)",
+  "",
+  "Successfully published:",
+  " - package-1@1.0.1
+ - package-2@1.1.0
+ - package-3@2.0.0
+ - package-4@1.1.0",
+]
+`;
+
+exports[`[independent] git adds changed files 1`] = `
+Array [
+  "packages/package-1/package.json",
+  "packages/package-2/package.json",
+  "packages/package-3/package.json",
+  "packages/package-4/package.json",
+  "packages/package-5/package.json",
+]
+`;
+
+exports[`[independent] git commit message 1`] = `
+"Publish
+
+ - package-1@1.0.1
+ - package-2@1.1.0
+ - package-3@2.0.0
+ - package-4@1.1.0
+ - package-5@1.0.1"
+`;
+
+exports[`[independent] git tags added 1`] = `
+Array [
+  "package-1@1.0.1",
+  "package-2@1.1.0",
+  "package-3@2.0.0",
+  "package-4@1.1.0",
+  "package-5@1.0.1",
+]
+`;
+
+exports[`[independent] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "latest",
+  },
+]
+`;
+
+exports[`[normal --canary --cd-version=patch] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.0.1-alpha.deadbeef",
+  "packages/package-2": "1.0.1-alpha.deadbeef",
+  "packages/package-3": "1.0.1-alpha.deadbeef",
+  "packages/package-4": "1.0.1-alpha.deadbeef",
+  "packages/package-5": "1.0.1-alpha.deadbeef",
+}
+`;
+
+exports[`[normal --canary=beta] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.1.0-beta.deadbeef",
+  "packages/package-2": "1.1.0-beta.deadbeef",
+  "packages/package-3": "1.1.0-beta.deadbeef",
+  "packages/package-4": "1.1.0-beta.deadbeef",
+  "packages/package-5": "1.1.0-beta.deadbeef",
+}
+`;
+
+exports[`[normal --canary] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.1.0-alpha.deadbeef",
+  "packages/package-2": "1.1.0-alpha.deadbeef",
+  "packages/package-3": "1.1.0-alpha.deadbeef",
+  "packages/package-4": "1.1.0-alpha.deadbeef",
+  "packages/package-5": "1.1.0-alpha.deadbeef",
+}
+`;
+
+exports[`[normal --canary] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "canary",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "canary",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "canary",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "canary",
+  },
+]
+`;
+
+exports[`[normal --ignore] git adds changed files 1`] = `
+Array [
+  "lerna.json",
+  "packages/package-1/package.json",
+  "packages/package-5/package.json",
+]
+`;
+
+exports[`[normal --ignore] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "latest",
+  },
+]
+`;
+
+exports[`[normal --npm-tag] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "custom",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "custom",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "custom",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "custom",
+  },
+]
+`;
+
+exports[`[normal --registry] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "latest",
+  },
+]
+`;
+
+exports[`[normal --skip-git --skip-npm] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.0.1",
+  "packages/package-2": "1.0.1",
+  "packages/package-3": "1.0.1",
+  "packages/package-4": "1.0.1",
+  "packages/package-5": "1.0.1",
+}
+`;
+
+exports[`[normal --skip-git] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "latest",
+  },
+]
+`;
+
+exports[`[normal --temp-tag] npm dist-tag add 1`] = `
+Object {
+  "packages/package-1": "package-1@1.0.1 latest",
+  "packages/package-2": "package-2@1.0.1 latest",
+  "packages/package-3": "package-3@1.0.1 latest",
+  "packages/package-4": "package-4@1.0.1 latest",
+}
+`;
+
+exports[`[normal --temp-tag] npm dist-tag rm 1`] = `
+Object {
+  "packages/package-1": "lerna-temp",
+  "packages/package-2": "lerna-temp",
+  "packages/package-3": "lerna-temp",
+  "packages/package-4": "lerna-temp",
+}
+`;
+
+exports[`[normal --temp-tag] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "lerna-temp",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "lerna-temp",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "lerna-temp",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "lerna-temp",
+  },
+]
+`;
+
+exports[`[normal] bumps package versions 1`] = `
+Object {
+  "packages/package-1": "1.0.1",
+  "packages/package-2": "1.0.1",
+  "packages/package-3": "1.0.1",
+  "packages/package-4": "1.0.1",
+  "packages/package-5": "1.0.1",
+}
+`;
+
+exports[`[normal] console output 1`] = `
+Array [
+  "",
+  "Changes:",
+  " - package-1: 1.0.0 => 1.0.1
+ - package-2: 1.0.0 => 1.0.1
+ - package-3: 1.0.0 => 1.0.1
+ - package-4: 1.0.0 => 1.0.1
+ - package-5: 1.0.0 => 1.0.1 (private)",
+  "",
+  "Successfully published:",
+  " - package-1@1.0.1
+ - package-2@1.0.1
+ - package-3@1.0.1
+ - package-4@1.0.1",
+]
+`;
+
+exports[`[normal] git adds changed files 1`] = `
+Array [
+  "lerna.json",
+  "packages/package-1/package.json",
+  "packages/package-2/package.json",
+  "packages/package-3/package.json",
+  "packages/package-4/package.json",
+  "packages/package-5/package.json",
+]
+`;
+
+exports[`[normal] npm publish --tag 1`] = `
+Array [
+  Object {
+    "dir": "packages/package-1",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-3",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-4",
+    "tag": "latest",
+  },
+  Object {
+    "dir": "packages/package-2",
+    "tag": "latest",
+  },
+]
+`;
+
+exports[`[normal] prompt 1`] = `
+Array [
+  Array [
+    "Select a new version (currently 1.0.0)",
+    Object {
+      "choices": Array [
+        Object {
+          "name": "Patch (1.0.1)",
+          "value": "1.0.1",
+        },
+        Object {
+          "name": "Minor (1.1.0)",
+          "value": "1.1.0",
+        },
+        Object {
+          "name": "Major (2.0.0)",
+          "value": "2.0.0",
+        },
+        Object {
+          "name": "Prepatch (1.0.1-0)",
+          "value": "1.0.1-0",
+        },
+        Object {
+          "name": "Preminor (1.1.0-0)",
+          "value": "1.1.0-0",
+        },
+        Object {
+          "name": "Premajor (2.0.0-0)",
+          "value": "2.0.0-0",
+        },
+        Object {
+          "name": "Prerelease",
+          "value": "PRERELEASE",
+        },
+        Object {
+          "name": "Custom",
+          "value": "CUSTOM",
+        },
+      ],
+    },
+    [Function],
+  ],
+]
+`;
+
+exports[`[republish prereleased] patch 1`] = `
+Object {
+  "packages/package-3": "1.0.1",
+  "packages/package-4": "1.0.1",
+  "packages/package-5": "1.0.1",
+}
+`;
+
+exports[`[republish prereleased] prerelease 1`] = `
+Object {
+  "packages/package-3": "1.0.1-beta.4",
+}
+`;
+
+exports[`PublishCommand --allow-branch with --canary does not restrict publishing canary versions 1`] = `
+Object {
+  "packages/package-1": "1.1.0-alpha.deadbeef",
+  "packages/package-2": "1.1.0-alpha.deadbeef",
+  "packages/package-3": "1.1.0-alpha.deadbeef",
+  "packages/package-4": "1.1.0-alpha.deadbeef",
+  "packages/package-5": "1.1.0-alpha.deadbeef",
+}
+`;

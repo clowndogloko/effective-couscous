@@ -1,0 +1,35 @@
+# don't build tags, it's redundant
+skip_tags: true
+
+clone_depth: 1
+
+environment:
+  NO_UPDATE_NOTIFIER: "1"
+  matrix:
+    - nodejs_version: "8"
+    - nodejs_version: "6"
+    # node v4 is broken on appveyor
+    # - nodejs_version: "4"
+
+matrix:
+  fast_finish: true
+
+cache:
+  # unpacking the yarn cache takes way too long
+  # - "%LOCALAPPDATA%\\Yarn"
+  - node_modules -> yarn.lock
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm config set loglevel warn
+  - npm -g install npm@latest-5
+  - yarn --frozen-lockfile
+
+before_test:
+  - git config --global user.email test@example.com
+  - git config --global user.name "Tester McPerson"
+
+test_script:
+  - yarn run ci -- --runInBand
+
+build: off
