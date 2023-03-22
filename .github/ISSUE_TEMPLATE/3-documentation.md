@@ -1,7 +1,10 @@
 ---
-name: "📖 Documentation issue"
+name: "\U0001F4D6 Documentation issue"
 about: Help improve our docs.
-labels: "type: docs"
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ### Documentation issue
