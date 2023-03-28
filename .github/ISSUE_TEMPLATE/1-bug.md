@@ -1,7 +1,10 @@
 ---
-name: "🐞 Bug Report"
+name: "\U0001F41E Bug Report"
 about: Report a bug
-labels: "type: bug"
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 <!-- Please do your best to fill out all of the sections below! -->

@@ -1,7 +1,10 @@
 ---
 name: "\U0001F680 Feature Request"
 about: Suggest a new feature.
-labels: "type: feature"
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 <!-- Please do your best to fill out all of the sections below! -->
